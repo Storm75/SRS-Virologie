@@ -59,7 +59,8 @@ public class PacketHandler {
 				ArrayList<String> lines = new ArrayList<String>();
 				String line = "";
 		        Process p = Runtime.getRuntime().exec(System.getenv("windir") +"\\system32\\"+"tasklist.exe"); //Get all of the tasks currently running
-		        BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
+
+		              BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
 		        while ((line = input.readLine()) != null) //Read in the tasks
 		            lines.add(line);
 		        
